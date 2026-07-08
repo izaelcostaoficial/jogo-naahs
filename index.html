@@ -1,25 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apresentação - 2</title>
-    <!-- Link do seu arquivo CSS -->
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Apresentação - Quiz</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
 
-    <div class="apresentacao">
-        <h1>Apresentação</h1>
-        <p>Bem-vindo ao nosso questionário!</p>
-        <!-- O botão chama a função IniciarQuiz() exatamente como no seu script -->
-        <button id="botaozinho" onclick="IniciarQuiz()">Iniciar Questionário</button>
-    </div>
 
-    <!-- O JavaScript vai construir as perguntas e o resultado final aqui dentro -->
-    <div id="quiz"></div>
+<div class="apresentacao">
 
-    <!-- Conexão com o seu script.js -->
-    <script src="script.js"></script>
+
+<h1>🎓 Bem-vindo ao Quiz</h1>
+
+
+<p>
+Responda as perguntas e descubra o quanto você conhece sobre mim!
+</p>
+
+
+<button id="botaozinho" onclick="IniciarQuiz()">
+
+🚀 Iniciar Questionário
+
+</button>
+
+
+</div>
+
+
+
+
+<div id="painel" class="oculto">
+
+
+<div class="informacoes">
+
+
+<p id="pontuacao">
+
+🏆 Pontos: 0
+
+</p>
+
+
+<p>
+
+⏱ Tempo:
+<span id="tempo">0</span>s
+
+</p>
+
+
+</div>
+
+
+
+<progress id="barra" value="0" max="6"></progress>
+
+
+
+
+<div id="quiz">
+
+
+</div>
+
+
+
+<button id="proximo" onclick="proximaPergunta()" disabled>
+
+Próxima pergunta ➡️
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+<div id="resultado">
+
+
+</div>
+
+
+
+
+
+<script src="script.js"></script>
+
+
 </body>
+
 </html>
