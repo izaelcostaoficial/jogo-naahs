@@ -1,0 +1,75 @@
+/* ==========================================
+   CONFIGURAÇÕES BÁSICAS DA PÁGINA (BODY)
+   ========================================== */
+body {
+    margin: 0;
+    text-align: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Container do Quiz para centralizar na tela */
+#quiz {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+/* ==========================================
+   TÍTULOS E TEXTOS
+   ========================================== */
+h1 {
+    color: #b20ae6; /* Roxo moderno */
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #980dd8; /* Roxo vivo para as perguntas */
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    color: #c09e14; /* Cor para o resultado final */
+    font-size: 22px;
+}
+
+p {
+    font-size: 18px;
+    color: #333333;
+}
+
+/* ==========================================
+   BOTÕES E INTERAÇÕES
+   ========================================== */
+button {
+    background-color: #1e1e24; /* Fundo escuro */
+    color: #ffffff; /* Letras brancas */
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    margin: 5px auto;
+    width: 100%; /* Faz os botões terem o mesmo tamanho */
+    max-width: 320px; /* Limita a largura para não ficarem gigantes */
+    display: inline-block;
+    border-radius: 8px; /* Cantos arredondados */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Efeito ao passar o mouse por cima do botão */
+button:hover {
+    background-color: #f1c40f; /* Fica amarelo */
+    color: #1e1e24; /* Letra muda para escuro */
+    transform: scale(1.03); /* Cresce levemente */
+}
+
+/* Ajuste específico para o botão de iniciar */
+#botaozinho {
+    width: auto;
+    max-width: none;
+    margin-top: 15px;
+}
