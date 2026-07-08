@@ -1,75 +1,436 @@
-/* ==========================================
-   CONFIGURAÇÕES BÁSICAS DA PÁGINA (BODY)
-   ========================================== */
-body {
-    margin: 0;
-    text-align: center;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    padding: 20px;
+/* ================================
+   CONFIGURAÇÕES GERAIS
+================================ */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
 }
 
-/* Container do Quiz para centralizar na tela */
-#quiz {
-    max-width: 600px;
-    margin: 30px auto;
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #1e1e24,
+        #3a0ca3
+    );
+
+    min-height:100vh;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
 }
 
-/* ==========================================
-   TÍTULOS E TEXTOS
-   ========================================== */
-h1 {
-    color: #b20ae6; /* Roxo moderno */
-    font-size: 28px;
-    margin-bottom: 15px;
+
+
+/* ================================
+   APRESENTAÇÃO INICIAL
+================================ */
+
+
+.apresentacao{
+
+    background:#292933;
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,.5);
+
+    animation:entrada 1s;
+
 }
 
-h2 {
-    color: #980dd8; /* Roxo vivo para as perguntas */
-    font-size: 24px;
-    margin-top: 20px;
-    margin-bottom: 25px;
+
+
+h1{
+
+    color:#f1c40f;
+
+    font-size:35px;
+
+    margin-bottom:20px;
+
 }
 
-h3 {
-    color: #c09e14; /* Cor para o resultado final */
-    font-size: 22px;
+
+
+.apresentacao p{
+
+    font-size:20px;
+
+    line-height:1.5;
+
 }
 
-p {
-    font-size: 18px;
-    color: #333333;
+
+
+
+
+/* ================================
+   BOTÕES
+================================ */
+
+
+button{
+
+    background:#ffffff;
+
+    color:#222;
+
+    border:none;
+
+    padding:14px 25px;
+
+    margin:10px;
+
+    border-radius:12px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
 }
 
-/* ==========================================
-   BOTÕES E INTERAÇÕES
-   ========================================== */
-button {
-    background-color: #1e1e24; /* Fundo escuro */
-    color: #ffffff; /* Letras brancas */
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    padding: 12px 24px;
-    margin: 5px auto;
-    width: 100%; /* Faz os botões terem o mesmo tamanho */
-    max-width: 320px; /* Limita a largura para não ficarem gigantes */
-    display: inline-block;
-    border-radius: 8px; /* Cantos arredondados */
-    cursor: pointer;
-    transition: all 0.2s ease;
+
+
+button:hover{
+
+    background:#f1c40f;
+
+    transform:scale(1.05);
+
 }
 
-/* Efeito ao passar o mouse por cima do botão */
-button:hover {
-    background-color: #f1c40f; /* Fica amarelo */
-    color: #1e1e24; /* Letra muda para escuro */
-    transform: scale(1.03); /* Cresce levemente */
+
+
+button:disabled{
+
+    background:#777;
+
+    color:white;
+
+    cursor:not-allowed;
+
+    transform:none;
+
 }
 
-/* Ajuste específico para o botão de iniciar */
-#botaozinho {
-    width: auto;
-    max-width: none;
-    margin-top: 15px;
+
+
+
+
+/* Botão iniciar */
+
+
+#botaozinho{
+
+    margin-top:25px;
+
+    background:#27ae60;
+
+    color:white;
+
+}
+
+
+
+
+
+/* ================================
+   ÁREA DO QUIZ
+================================ */
+
+
+#painel{
+
+    max-width:700px;
+
+    margin:30px auto;
+
+    background:#292933;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 20px rgba(0,0,0,.5);
+
+}
+
+
+
+.oculto{
+
+    display:none;
+
+}
+
+
+
+
+/* ================================
+   INFORMAÇÕES
+================================ */
+
+
+.informacoes{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    flex-wrap:wrap;
+
+    margin-bottom:20px;
+
+}
+
+
+
+#pontuacao{
+
+    color:#00ff99;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+
+
+#tempo{
+
+    color:#00d9ff;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+
+
+
+
+/* ================================
+   BARRA DE PROGRESSO
+================================ */
+
+
+progress{
+
+    width:100%;
+
+    height:25px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+
+
+/* ================================
+   PERGUNTAS
+================================ */
+
+
+#quiz{
+
+    background:#383844;
+
+    padding:25px;
+
+    border-radius:15px;
+
+}
+
+
+
+h2{
+
+    color:#ffd43b;
+
+    margin-bottom:25px;
+
+    font-size:25px;
+
+}
+
+
+
+h3{
+
+    color:#f1c40f;
+
+}
+
+
+
+
+
+/* ================================
+   OPÇÕES DE RESPOSTA
+================================ */
+
+
+.opcao{
+
+    display:block;
+
+    width:90%;
+
+    max-width:400px;
+
+    margin:12px auto;
+
+}
+
+
+
+.correta{
+
+    background:#27ae60 !important;
+
+    color:white;
+
+}
+
+
+
+.errada{
+
+    background:#c0392b !important;
+
+    color:white;
+
+}
+
+
+
+
+/* ================================
+   RESULTADO FINAL
+================================ */
+
+
+#resultado{
+
+    max-width:700px;
+
+    margin:30px auto;
+
+    background:#292933;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+
+
+
+
+/* ================================
+   ANIMAÇÃO
+================================ */
+
+
+@keyframes entrada{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(-40px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+/* ================================
+   CELULAR
+================================ */
+
+
+@media(max-width:600px){
+
+
+body{
+
+    padding:15px;
+
+}
+
+
+
+h1{
+
+    font-size:28px;
+
+}
+
+
+
+button{
+
+    width:90%;
+
+}
+
+
+
+.informacoes{
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
 }
